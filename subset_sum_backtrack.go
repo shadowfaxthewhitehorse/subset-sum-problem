@@ -35,6 +35,21 @@ func subsetSumBacktrack(S []int, d int) []int {
     return result
 }
 
+//
+// DEVNOTES
+//
+// The problem is as following: given a set S of n positive integers, and a positive integer d, write a program to find that subset of S that sums up to d.
+//
+// The program defines a backtracking function backtrack, which takes two arguments: the starting index start and the current sum sum. The function 
+// checks if the current sum equals the target sum d. If so, it copies the current path to the result array. If the current sum is greater than d 
+// or the starting index equals the length of the input array, the function returns without modifying the result array.
+//
+// The function then recursively calls itself twice, once to include the current element in the subset and once to exclude it. The function updates 
+// the current sum and the current path accordingly.
+//
+// Finally, the main function calls subsetSumBacktrack with the input array S and the target sum d. It prints the resulting subset to the console.
+//
+//
 func main() {
     S := []int{1, 2, 3, 4, 5}
     d := 7
